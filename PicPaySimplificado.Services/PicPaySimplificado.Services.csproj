@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PicPaySimplificado.API\PicPaySimplificado.API.csproj" />
+    <ProjectReference Include="..\PicPaySimplificado.Communication\PicPaySimplificado.Communication.csproj" />
+    <ProjectReference Include="..\PicPaySimplificado.Infrasctructure\PicPaySimplificado.Infrasctructure.csproj" />
+  </ItemGroup>
+
+</Project>
