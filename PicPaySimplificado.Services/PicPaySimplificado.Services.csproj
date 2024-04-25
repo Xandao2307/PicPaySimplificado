@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PicPaySimplificado.API\PicPaySimplificado.API.csproj" />
     <ProjectReference Include="..\PicPaySimplificado.Communication\PicPaySimplificado.Communication.csproj" />
     <ProjectReference Include="..\PicPaySimplificado.Infrasctructure\PicPaySimplificado.Infrasctructure.csproj" />

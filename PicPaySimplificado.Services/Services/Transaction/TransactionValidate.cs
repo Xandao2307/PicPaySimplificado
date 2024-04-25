@@ -35,13 +35,14 @@ namespace PicPaySimplificado.Services.Services.Transaction
             try
             {
                 AuthorizeService authorizeService = new();
-                await authorizeService.Authorizer();
+                var result = await authorizeService.Authorizer();
+                return result;
+
             }
             catch (UnauthorizeException)
             {
                 return false;
             }
-            return true;
 
         }
     }
