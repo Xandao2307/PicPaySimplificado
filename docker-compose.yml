@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"  # Porta de conexão padrão do RabbitMQ
+      - "15672:15672"  # Porta da interface de gerenciamento do RabbitMQ
+    volumes:
+      - ./rabbitmq:/var/lib/rabbitmq  # Volume para persistir os dados do RabbitMQ
+
+# Adicione outros serviços aqui, se necessário
