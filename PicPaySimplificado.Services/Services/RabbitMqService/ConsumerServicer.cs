@@ -22,7 +22,7 @@ namespace PicPaySimplificado.Services.Services.RabbitMqService
                 menssages.Add(menssage);
             };
 
-            channel.BasicConsume(queue: "Pic-Pay-Queue", autoAck: false, consumer: consumer);
+            channel.BasicConsume(queue: "Pic-Pay-Queue", autoAck: true, consumer: consumer);
             return menssages;
         }
     }

@@ -19,7 +19,15 @@ services:
       - "1433:1433"
     networks:
       - sqlserver_network
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - /var/lib/desktop-containerd:/var/lib/desktop-containerd
+      - /var/lib/containerd:/var/lib/containerd
+      - /var/run:/var/run
 
 networks:
   sqlserver_network:
     driver: bridge
+
+volumes:
+  sqlserver_data:

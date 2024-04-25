@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PicPaySimplificado.Infrasctructure.Entities
 {
+    [Table(name:"tb_user")]
     public class User
     {
         public Guid Id { get; set; } = Guid.NewGuid();

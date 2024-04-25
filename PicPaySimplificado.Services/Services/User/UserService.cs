@@ -52,7 +52,7 @@ namespace PicPaySimplificado.Services.Services.User
             _dbContext.Wallets.Add(payerWallet);
             _dbContext.Wallets.Add(payeeWallet);
 
-            await _dbContext.SaveChangesAsync();
+            _dbContext.SaveChanges();
 
         }
 
