@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PicPaySimplificado.Infrasctructure.DbContexts;
+using PicPaySimplificado.Services.Services.Transaction;
+using PicPaySimplificado.Services.Services.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PicPayDbContext>(options => options.UseInMemoryDatabase("PicPay"));
+builder.Services.AddScoped<TransactionService>();
+builder.Services.AddScoped<UserService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

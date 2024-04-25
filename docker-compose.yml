@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   rabbitmq:
@@ -9,4 +9,17 @@ services:
     volumes:
       - ./rabbitmq:/var/lib/rabbitmq  # Volume para persistir os dados do RabbitMQ
 
-# Adicione outros serviços aqui, se necessário
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "1q2w3e4r@#$"
+    ports:
+      - "1433:1433"
+    networks:
+      - sqlserver_network
+
+networks:
+  sqlserver_network:
+    driver: bridge

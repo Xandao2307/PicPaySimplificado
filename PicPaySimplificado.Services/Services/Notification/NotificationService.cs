@@ -28,7 +28,6 @@ namespace PicPaySimplificado.Services.Services.Notification
             foreach (var msg in msgs)
                 await SendMenssageToMock(msg);
             
-
         }
 
         public async Task SendMenssageToMock(string msg)

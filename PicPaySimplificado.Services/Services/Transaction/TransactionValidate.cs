@@ -22,8 +22,8 @@ namespace PicPaySimplificado.Services.Services.Transaction
 
         internal async Task<bool> Validate(TransactionRequest transaction)
         {
-            var payee = _dbContext.Users.Find(transaction.Payee.Id);
-            var payer = _dbContext.Users.Find(transaction.Payer.Id);
+            var payee = await _dbContext.Users.FindAsync(transaction.Payee);
+            var payer = await _dbContext.Users.FindAsync(transaction.Payer);
 
             if (payee == null || payer == null || payer.IsSeller)
                 throw new InvalidPayerException("The payer don't can be a seller");

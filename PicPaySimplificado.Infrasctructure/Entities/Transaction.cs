@@ -8,7 +8,7 @@ namespace PicPaySimplificado.Infrasctructure.Entities
 {
     public class Transaction
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public User Payee { get; set; }
         public User Payer { get; set; }
         public Guid PayeeId { get; set; }
